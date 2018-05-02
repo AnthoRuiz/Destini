@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA7CE19B0F542AC2F2CDB1A6 /* Pods_Destini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E749D9050DEE4101317B5BA /* Pods_Destini.framework */; };
 		EBB1C7411B9633A60011F5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1C7401B9633A60011F5C3 /* AppDelegate.swift */; };
 		EBB1C7431B9633A60011F5C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1C7421B9633A60011F5C3 /* ViewController.swift */; };
 		EBB1C7461B9633A60011F5C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB1C7441B9633A60011F5C3 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		432C26EC475AFC8B77B3E788 /* Pods-Destini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Destini.release.xcconfig"; path = "Pods/Target Support Files/Pods-Destini/Pods-Destini.release.xcconfig"; sourceTree = "<group>"; };
+		4E749D9050DEE4101317B5BA /* Pods_Destini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Destini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70CCB8863F713B2D7AACD0F5 /* Pods-Destini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Destini.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Destini/Pods-Destini.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB1C73B1B9633A60011F5C3 /* Destini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Destini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1C73F1B9633A60011F5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB1C7401B9633A60011F5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7CE19B0F542AC2F2CDB1A6 /* Pods_Destini.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C497DBB827B232C97C7233A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E749D9050DEE4101317B5BA /* Pods_Destini.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		596B3CA16230FDC185194D0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70CCB8863F713B2D7AACD0F5 /* Pods-Destini.debug.xcconfig */,
+				432C26EC475AFC8B77B3E788 /* Pods-Destini.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EBB1C7321B9633A60011F5C3 = {
 			isa = PBXGroup;
 			children = (
 				EBB1C73D1B9633A60011F5C3 /* Destini */,
 				EBB1C73C1B9633A60011F5C3 /* Products */,
+				596B3CA16230FDC185194D0A /* Pods */,
+				1C497DBB827B232C97C7233A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB1C75A1B9633A70011F5C3 /* Build configuration list for PBXNativeTarget "Destini" */;
 			buildPhases = (
+				5E920FCD707F7E08F63713BA /* [CP] Check Pods Manifest.lock */,
 				EBB1C7371B9633A60011F5C3 /* Sources */,
 				EBB1C7381B9633A60011F5C3 /* Frameworks */,
 				EBB1C7391B9633A60011F5C3 /* Resources */,
+				46BA70EE30EBA5268A31801E /* [CP] Embed Pods Frameworks */,
+				ECC982D58EEE61177660E2FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46BA70EE30EBA5268A31801E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Destini/Pods-Destini-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Destini/Pods-Destini-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E920FCD707F7E08F63713BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Destini-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECC982D58EEE61177660E2FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Destini/Pods-Destini-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBB1C7371B9633A60011F5C3 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		EBB1C75B1B9633A70011F5C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70CCB8863F713B2D7AACD0F5 /* Pods-Destini.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Destini/Info.plist;
@@ -286,6 +368,7 @@
 		};
 		EBB1C75C1B9633A70011F5C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432C26EC475AFC8B77B3E788 /* Pods-Destini.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Destini/Info.plist;

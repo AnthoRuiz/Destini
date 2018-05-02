@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Destini
 //
-//  Created by Jakaboy on 05/01/2018.
-//  Copyright (c) 2018 Jakaboy. All rights reserved.
+//  Created by Anthony Ruiz on 5/1/18.
+//  Copyright © 2018 Jakaboy. All rights reserved.
 //
 
 import UIKit
